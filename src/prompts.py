@@ -43,36 +43,6 @@ def create_xml_to_csv_script_prompt(table_xml_str: str) -> str:
     {table_xml_str}
     """
 
-def create_xml_to_csv_prompt(table_xml_str: str) -> str:
-
-    return f"""
-    Using the OCR table (XML) provided, create column and table descriptions and return the table as a CSV format.
-
-    Tasks:
-
-    table_description:
-    - Provide a verbose description of the table based on the XML structure.
-
-    column_descriptions:
-    - Make column names SQL compatible (use underscores for spaces, no dots, etc.)
-    - Ensure each column name is unique
-    - Add units to column names if present (e.g., time_hours, temp_celsius)
-    - Preserve the original meaning of headers (e.g., "UTC Untreated control group (%)" → "utc_untreated_control_group_pct")
-    - Avoid SQL reserved keywords (e.g., group, order, id)
-    - Do not interpret or rename based on assumed purpose
-    - Do not mistake UTC for inhibition; UTC refers to percentage expression relative to untreated control. 
-
-    csv:
-    - Transcribe each <row> as a separate CSV row, regardless of the number of <entry> tags it contains
-    - Use "NA" for missing or empty values
-    - Use comma as delimiter
-    - Use double quotes around ALL fields (both text and numeric)
-    - Preserve all text exactly as it appears in the XML, including descriptive elements like <sub></sub>
-    - Do not merge or interpret any data
-
-    Inputs:
-    table XML:{table_xml_str}"""
-
 def create_sql_prompt(conn: duckdb.duckdb.DuckDBPyConnection, response: dict) -> str:
     
     # Handle script-based response instead of direct CSV

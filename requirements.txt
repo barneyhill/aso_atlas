@@ -1,0 +1,8 @@
+openai
+pydantic>=2
+pandas
+tqdm
+duckdb
+PyYAML
+numpy
+matplotlib
