@@ -42,4 +42,4 @@ print(df.columns)
 - **OligoAI Model**: [https://huggingface.co/barneyhill/OligoAI](https://huggingface.co/barneyhill/OligoAI)
 - **OligoAI Training Code**: [https://github.com/barneyhill/OligoAI](https://github.com/barneyhill/OligoAI)
 - **Web Interface**: [https://sitlabs.org/OligoAI](https://sitlabs.org/OligoAI)
-- **Preprint manuscript** [https://github.com/barneyhill/aso_atlas/blob/main/oligoai_manuscript.pdf]
+- **Preprint manuscript** [https://github.com/barneyhill/aso_atlas/blob/main/oligoai_manuscript.pdf](https://github.com/barneyhill/aso_atlas/blob/main/oligoai_manuscript.pdf)
