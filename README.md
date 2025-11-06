@@ -1,6 +1,9 @@
 # ASO Atlas
-
 A comprehensive dataset of 188,521 RNase H-mediated antisense oligonucleotides (ASOs) with experimentally validated efficacy measurements, extracted from 417 USPTO patents published between 2001 and 2025.
+
+<p align="center">
+  <img width="600" height="600" alt="gene_circle" src="https://github.com/user-attachments/assets/7c055805-6685-494d-98b8-3e7f54c129cd" />
+</p>
 
 ## Overview
 
