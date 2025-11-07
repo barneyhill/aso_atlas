@@ -40,7 +40,7 @@ print(df.columns)
 
 ## Related Resources
 
-- **Preprint** [http://biorxiv.org/content/10.1101/2025.10.29.68529…](http://biorxiv.org/content/10.1101/2025.10.29.68529…)
+- **Preprint**: [http://biorxiv.org/content/10.1101/2025.10.29.68529…](http://biorxiv.org/content/10.1101/2025.10.29.68529…)
 - **OligoAI Model**: [https://huggingface.co/barneyhill/OligoAI](https://huggingface.co/barneyhill/OligoAI)
 - **OligoAI Training Code**: [https://github.com/barneyhill/OligoAI](https://github.com/barneyhill/OligoAI)
 - **Web Interface**: [https://sitlabs.org/OligoAI](https://sitlabs.org/OligoAI)
