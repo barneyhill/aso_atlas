@@ -18,8 +18,15 @@ ASO Atlas provides the first large-scale, publicly available resource for unders
 ## Installation
 
 ```bash
+# Clone the repository
 git clone https://github.com/barneyhill/aso_atlas.git
 cd aso_atlas
+
+# Create and activate conda environment with Python 3.11
+conda create -n oligoai python=3.11
+conda activate oligoai
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
@@ -33,10 +40,12 @@ df = pd.read_pickle('data/aso_atlas.pkl')
 
 # View schema
 print(df.columns)
-# ['aso_sequence_5_to_3', 'inhibition_percent', 'chemistry', 'custom_id', 
-#  'target_mrna', 'target_gene', 'cell_line', 'dosage', 
+# ['aso_sequence_5_to_3', 'inhibition_percent', 'chemistry', 'custom_id',
+#  'target_mrna', 'target_gene', 'cell_line', 'dosage',
 #  'cells_per_well', 'transfection_method', ...]
 ```
+
+For a complete walkthrough, see the [demo notebook](notebooks/demo.ipynb).
 
 ## Related Resources
 
