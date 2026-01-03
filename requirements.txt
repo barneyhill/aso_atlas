@@ -1,0 +1,7 @@
+# Core dependencies
+pandas>=2.0.0
+pydantic>=2.0.0
+
+# Jupyter notebook support (optional, for running notebooks)
+jupyter>=1.0.0
+ipykernel>=6.0.0

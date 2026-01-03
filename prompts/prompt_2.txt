@@ -1,0 +1,31 @@
+Your goal is to produce a dataset of antisense-oligonucleotide sequences and their inhibition percentages. To do so you must stack the secondary_table with the primary_table using a SQL command.
+
+Required Columns in secondary_table:
+1. ASO sequence (case insensitive)
+2. One of:
+    - inhibition/knockdown/reduction percentage
+    - UTC (Untreated Control) / RNA percentage
+
+Transformation Rules:
+- Numeric columns -> DOUBLE
+- inhibition_percent =
+    - Direct copy from inhibition/knockdown columns
+    - 100 - UTC(%) for untreated control
+- CONCAT two columns if ASO sequence is split (e.g.,sequence_part_one, sequence_part_two)
+- When using CAST be careful, some rows may not be castable to double, hence use TRY_CAST.
+
+Task:
+1. Generate SQL:
+- Stack (INSERT INTO) secondary_table onto primary_table
+- Apply transformations as needed
+- **CRITICAL: Always use "secondary_table" as the table name in your FROM clause**
+- **When referencing columns from secondary_table, use the exact column names shown in the schema, including any special characters or numbers.**
+
+Output Format:
+- sql_command: string containing complete SQL command to stack the secondary_table onto primary_table
+
+Data:
+primary_table:
+Schema:
+- aso_sequence_5_to_3 (VARCHAR): 5'-3' ASO nucleotide sequence
+- inhibition_percent (DOUBLE): target inhibition percentage, range 0-100
